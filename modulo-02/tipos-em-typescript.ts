@@ -183,3 +183,23 @@ valorVariavel = 'Oi, tudo bem?'; //Não retornará um erro.
 
 let valorVariavel2: unknown;
 
+
+//Void:
+
+//Esse tipo representa, basicamente, que uma função não retornará nenhum dado.
+
+//Criando funções com o retorno "void":
+function olaMundo(): void { //Estamos criando uma função que não retorna nada.
+    console.log("Olá, desenvolvedores!");
+}
+
+olaMundo();
+
+const olaMundo2 = () => { //Estamos criando uma constante e atribuindo à ela uma função que não retorna nada.
+    console.log("Olá, desenvolvedores!");
+}
+
+olaMundo2();
+
+//Tipos "null" e "undefined":
+
