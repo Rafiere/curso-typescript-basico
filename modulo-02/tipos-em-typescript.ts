@@ -152,3 +152,34 @@ console.log(Dia);
 
 console.log(Idioma.FRANCES); //Como é um enum numérico, será retornado o número desse enum.
 console.log(Dia.DOMINGO); //Como é um enum de string, será retornado o nome do enum.
+
+
+//Any:
+
+//Se não tiparmos algo no TS, esse algo será do tipo "Any". Não devemos utilizar esse tipo no TS.
+const a: any = 888;
+const b: any = ['perigo'];
+
+const c = a + b; //Sem o "any", o TS resultaria em um erro. Com o "any", ele não resultará um erro e essas variáveis se comportarão exatamente como no JavaScript.
+
+console.log(c);
+
+//Tipo any sendo inferido implicitamente:
+let frase; //Como não definimos nenhum tipo, essa variável será do tipo "any", e um erro poderá ser causado.
+frase = 'Testando!';
+console.log(frase);
+
+
+//Unknown:
+
+//A diferença entre o "any" e o "unknown" é que o "any" não fará a verificação de tipos, enquanto que o "unknown" fará, assim, se não sabemos o tipo
+//de uma determinada variável, devemos utilizar o tipo "unknown" ao invés do tipo "any".
+
+let valorVariavel: unknown;
+valorVariavel = true; //Não retornará um erro.
+valorVariavel = 123; //Não retornará um erro.
+valorVariavel = []; //Não retornará um erro.
+valorVariavel = 'Oi, tudo bem?'; //Não retornará um erro.
+
+let valorVariavel2: unknown;
+

@@ -108,4 +108,14 @@ var Dia;
 console.log(Dia);
 //Acessando o valor de um enum:
 console.log(Idioma.FRANCES); //Como é um enum numérico, será retornado o número desse enum.
-console.log(Dia.DOMINGO.toString()); //Como é um enum de string, será retornado o nome do enum.
+console.log(Dia.DOMINGO); //Como é um enum de string, será retornado o nome do enum.
+//Any:
+//Se não tiparmos algo no TS, esse algo será do tipo "Any". Não devemos utilizar esse tipo no TS.
+const a = 888;
+const b = ['perigo'];
+const c = a + b; //Sem o "any", o TS resultaria em um erro. Com o "any", ele não resultará um erro e essas variáveis se comportarão exatamente como no JavaScript.
+console.log(c);
+//Tipo any sendo inferido implicitamente:
+let frase;
+frase = 'Testando!';
+console.log(frase);
