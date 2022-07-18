@@ -121,3 +121,34 @@ function criarPessoa(...nome: Nome){
 }
 
 console.log(criarPessoa('Testando', 'Testando', 'Testando'));
+
+
+//enums:
+
+//enums numéricos:
+enum Idioma {
+    PORTUGUES,
+    ESPANHOL,
+    INGLES,
+    FRANCES
+}
+
+console.log(Idioma);
+
+//enums do tipo string: (Não é muito recomendado utilizarmos esse enum).
+enum Dia {
+    SEGUNDA = 'SEG',
+    TERCA = 'TER',
+    QUARTA = 'QUA',
+    QUINTA = 'QUI',
+    SEXTA = 'SEX',
+    SABADO = 'SABADO',
+    DOMINGO = 'DOMINGO'
+}
+
+console.log(Dia);
+
+//Acessando o valor de um enum:
+
+console.log(Idioma.FRANCES); //Como é um enum numérico, será retornado o número desse enum.
+console.log(Dia.DOMINGO); //Como é um enum de string, será retornado o nome do enum.

@@ -84,3 +84,28 @@ function criarPessoa(...nome) {
     return [...nome];
 }
 console.log(criarPessoa('Testando', 'Testando', 'Testando'));
+//enums:
+//enums numéricos:
+var Idioma;
+(function (Idioma) {
+    Idioma[Idioma["PORTUGUES"] = 0] = "PORTUGUES";
+    Idioma[Idioma["ESPANHOL"] = 1] = "ESPANHOL";
+    Idioma[Idioma["INGLES"] = 2] = "INGLES";
+    Idioma[Idioma["FRANCES"] = 3] = "FRANCES";
+})(Idioma || (Idioma = {}));
+console.log(Idioma);
+//enums do tipo string: (Não é muito recomendado utilizarmos esse enum).
+var Dia;
+(function (Dia) {
+    Dia["SEGUNDA"] = "SEG";
+    Dia["TERCA"] = "TER";
+    Dia["QUARTA"] = "QUA";
+    Dia["QUINTA"] = "QUI";
+    Dia["SEXTA"] = "SEX";
+    Dia["SABADO"] = "SABADO";
+    Dia["DOMINGO"] = "DOMINGO";
+})(Dia || (Dia = {}));
+console.log(Dia);
+//Acessando o valor de um enum:
+console.log(Idioma.FRANCES); //Como é um enum numérico, será retornado o número desse enum.
+console.log(Dia.DOMINGO.toString()); //Como é um enum de string, será retornado o nome do enum.
